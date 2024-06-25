@@ -1,0 +1,115 @@
+# Install Frappe-React-SDK
+
+> Based on the Frappe-React-SDK from Commit Company.
+
+>Author of SDK : [Nikhil kothari](https://github.com/The-Commit-Company)
+
+### <b><font color="yellow">Features</b></font>
+
+
+The library currently supports the following features:
+
+* 🔐 Authentication - login with username and password (cookie based) + token based authentication, logout and maintain user state
+
+* 🗄 Database - Hooks to get document, get list of documents, get count, create, update and delete documents
+
+* 📄 File upload - Hook to upload a file to the Frappe filesystem. Maintains loading, progress and error states.
+
+* 🤙🏻 API calls - Hooks to make API calls to your whitelisted backend functions and maintain state
+🔍 Search - Hook to search documents in your database (with debouncing ✨)
+</br>
+
+
+## <b>Guide to Installing Frappe React SDK</b>:
+
+* <b><u>`Initialise the bench`</u></b>
+    ```
+        bench init [bench-name]
+        cd [bench-name]
+    ```
+* <b><u>`Enable Developer Mode`</u></b>
+    ```
+        bench set-config -g developer_mode 1
+    ```
+
+*  <b><u>`Create your Frappe App`</u></b>
+
+    ```
+    bench new-app [app-name]
+    ```
+    * Follow all the steps below carefully: 
+
+        > <font color="yellow">This is the name of the app. Ex: scope_app </font>
+        1. Enter the Title : 
+        2. Description : -------
+        3. Publisher: -----
+        4. Email: ------
+        5. App License: ----
+        6. Create Github Workflow action for unit tests: Y/n
+        7. Branch Name : main
+
+*  <b><u>`Git Clone Doppio app`</u></b>
+    > <font color="yellow">A Frappe App to setup and manage single page applications and custom desk pages (using Vue 3 or React) on your custom Frappe App.</font>
+
+    ```bash
+    bench get-app https://github.com/NagariaHussain/doppio
+    ```
+    > <font color="yellow"># The above command will install the Doppio frappe app on your bench and enable some custom bench CLI commands that will ease the process of attaching a SPA to your Frappe Application.</font>
+    
+
+    </br>
+
+* <b><u>`Install frappe-types`</u></b>
+    ```
+        bench get-app https://github.com/The-Commit-Company/frappe-types
+    ```
+
+* <b><u>`Create new site`</u></b>
+    ```
+        bench new-site [site-name]
+    ```
+* <b><u>`Set the site default`</u></b>
+    ```
+        bench use [site-name]
+    ```
+
+* <u><b>Start the Bench </b></u>
+
+    ```
+    bench start
+    ```
+* <b><u>``Install App on your site`` : </u></b>
+
+    Open another terminal without closing the previous one.
+    ```
+    bench install-app [app_name]
+    ```
+    Do the setup completely.
+
+* <b><u>`Setting Up React/Vue SPA`</b></u>
+
+    <font color="yellow">This will create a new React/Vue SPA in your app. Your hyperlink format will be : <font color="#4badde"><ins>https://localhost:[port]/[react-app]<ins> </font></font>
+    ```bash
+    bench add-spa --app <app-name> [--tailwindcss] [--typescript]
+
+    # or just, and answer the prompts
+    bench add-spa
+    ```
+
+    > Answer all the prompts.
+
+</br>
+
+<h4>Hooray! React app is setup </h4>
+</br>
+
+
+* <u><b>Run the react app on Localhost </b></u>
+
+    ```
+    cd ./apps/[app_name]
+    npm run dev or yarn dev
+    ```
+* <b><u> To run the app on development server: </b></u>
+
+    bench build --app [app-name] --requirements

@@ -1,0 +1,83 @@
+<h1>Guide to Install ERPNext in Frappe</h1>
+ERPNext is an open-source ERP system built on top of Frappe Framework. Here's a step by step procedure on how to install it on Frappe:
+<br>
+<br>
+
+[ :warning: <b><font color="red">Note : </font></b> This App can only be installed after having the Frappe Bench initialised in the system. To know more about bench, <b><ins>[click this link](https://frappeframework.com/docs/user/en/bench)</ins></b> ]
+
+[ :warning: <b><font color="red">Note : </font></b>  If you still dont have Bench installed, follow  the file named <ins>InstallFrappeDependencies.md</ins> ]
+
+## Install Frappe Bench
+
+```
+bench init --frappe-branch version-15 frappe-bench
+```
+
+* <b><u>``Switch to Frappe Bench directory``</u></b> : 
+
+    ```
+    cd frappe-bench
+    ```
+* <b><u>``Change user directory permissions``</u></b> :
+    ```
+    chmod -R o+rx /home/[frappe-user]
+    ```
+* <b><u>``Create a New Site``</u></b> : 
+
+    ```
+    bench new-site [site-name]
+    ```
+    </br>
+
+    ## Install ERPNext and Other Apps
+
+* <b><u>``Git Clone the apps you want`` : </u></b>
+
+    The first app we will download is the payments app. This app is required when setting up ERPNext.
+
+    ```
+    bench get-app payments
+    bench get-app --branch version-15 erpnext
+    ```
+    :memo: If you want to install HRMS: 
+
+    ```
+    bench get-app hrms
+    ```
+* <b><u>``Install ERPNext on your site`` : </u></b>
+
+    Open another terminal without closing the previous one.
+    ```
+    bench --site [site-name] install-app erpnext
+    ```
+
+* <b><u>``Start Bench``</u><b>
+    ```
+    bench start
+    ```
+
+**OPTIONAL**
+-----------
+
+<p>Follow this below line Only if you installed HRMS app: </p>
+
+* <b><u>``Install HRMS on your site`` : </u></b>
+
+    ```
+    bench --site [site-name] install-app hrms
+    ```
+-------------------------
+</br>
+</br>
+
+
+* Go to the link provided on your bench for [localhost.com](http://127.0.0.1:8080/app/)
+* You will see the login page of your Frappe site.
+* Use the default credentials of `Administrator`
+* Go to the `About` in the right side of the navbar.
+* Does it show your app name below ? 
+
+Yes ? `Congratulations! You have successfully installed Frappe with your custom app.` :D
+
+No ? `Follow the steps mentioned above and try again` :'(
+

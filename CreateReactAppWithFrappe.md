@@ -112,4 +112,6 @@ The library currently supports the following features:
     ```
 * <b><u> To run the app on development server: </b></u>
 
+    ```
     bench build --app [app-name] --requirements
+    ```

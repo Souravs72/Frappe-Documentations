@@ -25,7 +25,7 @@
 - [Getting Started](#getting-started)
 - [Prerequisites](#prerequisites)
 - [Usage](#usage)
-- [Built Using](#built-using)
+- [Frappe is Built Using](#built-using)
 - [Authors](#authors)
 - [Acknowledgements](#acknowledgements)
 
@@ -45,7 +45,7 @@ Basic understanding of Python and JavaScript is recommended. If you're unfamilia
 
 The notes are numbered sequentially, and each corresponds to specific functionalities. Familiarize yourself with the names and functionalities before using them.
 
-## ⛏️ Built Using <a name="built-using"></a>
+## ⛏️ Frappe is Built Using <a name="built-using"></a>
 
 - [MariaDB](https://mariadb.org/) - Database
 - [Frappe](https://frappeframework.com/) - Server Framework
@@ -61,7 +61,7 @@ The notes are numbered sequentially, and each corresponds to specific functional
 - [Nik Kothari](https://github.com/nikkothari22) - Frappe React SDK and other tools
 - [@souravs72](https://github.com/souravs72) - Documentation of this repository
 
-See also the list of [contributors](https://github.com/frappe/frappe/graphs/contributors) who participated in this project.
+See also the list of [contributors](https://github.com/frappe/frappe/graphs/contributors) who participated in Frappe project.
 
 ## 🎉 Acknowledgements <a name="acknowledgements"></a>
 

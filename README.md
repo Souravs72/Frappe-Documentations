@@ -26,7 +26,6 @@
 - [Prerequisites](#prerequisites)
 - [Usage](#usage)
 - [Built Using](#built-using)
-- [Contributing](../CONTRIBUTING.md)
 - [Authors](#authors)
 - [Acknowledgements](#acknowledgements)
 
